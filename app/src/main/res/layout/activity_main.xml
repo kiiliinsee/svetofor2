@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp">
+
+    <!-- Красный свет -->
+    <View
+        android:id="@+id/red_light"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/circle_shape" />
+
+    <!-- Жёлтый свет -->
+    <View
+        android:id="@+id/yellow_light"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/circle_shape" />
+
+    <!-- Зелёный свет -->
+    <View
+        android:id="@+id/green_light"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="48dp"
+        android:background="@drawable/circle_shape" />
+
+    <!-- Кнопка переключения -->
+    <Button
+        android:id="@+id/next_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Далее"
+        android:textSize="18sp" />
+
+</LinearLayout>
