@@ -7,6 +7,8 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import android.graphics.drawable.GradientDrawable
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -40,14 +42,18 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun updateLights() {
-        redLight.setBackgroundColor(Color.GRAY)
-        yellowLight.setBackgroundColor(Color.GRAY)
-        greenLight.setBackgroundColor(Color.GRAY)
+        val redDrawable = redLight.background as GradientDrawable
+        val yellowDrawable = yellowLight.background as GradientDrawable
+        val greenDrawable = greenLight.background as GradientDrawable
+
+        redDrawable.setColor(Color.GRAY)
+        yellowDrawable.setColor(Color.GRAY)
+        greenDrawable.setColor(Color.GRAY)
 
         when (states[currentStateIndex]) {
-            "RED" -> redLight.setBackgroundColor(Color.RED)
-            "YELLOW1", "YELLOW2" -> yellowLight.setBackgroundColor(Color.YELLOW)
-            "GREEN" -> greenLight.setBackgroundColor(Color.GREEN)
+            "RED" -> redDrawable.setColor(Color.RED)
+            "YELLOW1", "YELLOW2" -> yellowDrawable.setColor(Color.YELLOW)
+            "GREEN" -> greenDrawable.setColor(Color.GREEN)
         }
     }
 
